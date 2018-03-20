@@ -34,7 +34,7 @@ To buy tokens, they have few options:
 The last one can be done only by whitelisted customers OR within whitelist treshold limit, otherwise it will be reverted. 
 <br>Therefore it is worth to consider bying HEAL tokens through deposit contract interface. 
 
-####Proccess flow
+####Proccess flow 
 From the high level perspective the sale process consist of next steps:
 
 - Deposit (by sending to deposit contract itself or by calling `deposit()` function) any amount of Ethers. 
