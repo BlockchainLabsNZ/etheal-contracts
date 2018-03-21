@@ -46,6 +46,7 @@ The audit report is focused on the following key areas - though this is not an e
 
 - [Test Coverage](test-coverage.md)
 - [Dynamic Analysis](dynamic-analysis.md)
+- [Functional Analysis](functional-tests.md)
 - [Gas Consumption](gas-consumption-report.md)
 
 ## Issues
