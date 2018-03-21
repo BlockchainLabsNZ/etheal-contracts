@@ -9,7 +9,8 @@ File                       |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovere
   EthealPromoToken.sol     |      100 |      100 |      100 |      100 |                |
   EthealWhitelist.sol      |      100 |      100 |      100 |      100 |                |
 
-Full coverage report of related contracts [is here](https://github.com/BlockchainLabsNZ/etheal-contracts/tree/audit/audit/coverage).
+Full coverage report of related contracts [is here](https://coveralls.io/github/BlockchainLabsNZ/etheal-contracts?branch=audit).
+[![Coverage Status](https://coveralls.io/repos/github/BlockchainLabsNZ/etheal-contracts/badge.svg?branch=audit)](https://coveralls.io/github/BlockchainLabsNZ/etheal-contracts?branch=audit)
 
 <br>
 
