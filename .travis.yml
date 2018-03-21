@@ -16,9 +16,9 @@ matrix:
   fast_finish: true
   allow_failures:
     - env: SOLIDITY_COVERAGE=true
-before_script:
-  - npm run gana
 script:
+  - npm run gana
+  - sleep 5
   - npm test
 after_script:
   - ./node_modules/.bin/solidity-coverage && cat coverage/lcov.info | ./node_modules/.bin/coveralls
