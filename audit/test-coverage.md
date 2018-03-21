@@ -42,8 +42,7 @@ Full coverage report of related contracts [is here](coverage/contracts/index.htm
         return true;
     }
 ```
-
-Else path is tested here: [tx hash]()
+The index array is always set to start at 0. The transaction count will begin at 1 as it is a counter variable. 
 
 
 <br>
