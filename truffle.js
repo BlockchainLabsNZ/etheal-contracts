@@ -12,11 +12,17 @@ if (!process.env.SOLIDITY_COVERAGE){
 
 module.exports = {
   networks: {
-    development: {
+	 development: {
       host: 'localhost',
       port: 8545,
       network_id: '*',
-      gas: 0xfffffffffff
+      gas: 4600000
+    },
+	 kovan: {
+      host: 'localhost',
+      port: 8545,
+      network_id: '*',
+      gas: 4600000
     },
     ropsten: {
       provider: provider,

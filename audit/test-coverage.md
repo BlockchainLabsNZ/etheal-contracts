@@ -117,7 +117,9 @@ Requires that beneficiary account is exist.
         super.finalization();
     }    
 ```
-There is no ELSE path to take if the condition is failed.
+`ethealController.setHodlerTime(now + 14 days)` doesn't rely on the result of transfering tokens performed by `if (_balance > tokenBalance)`, and `super.finalization()` is a function of an abstract class (is not implemented). 
+<br>Nothing to test.
+
 
 
 <br>
