@@ -251,7 +251,8 @@ If amount to transfer is greater than authorised amount, it should fail (functio
     }     
 
 ```
-IF path is tested here: [tx hash]()
+If one variable is greater than other, than it gets the value of that other.
+<br>Nothing to test.
 
 <br>
 
@@ -271,7 +272,8 @@ IF path is tested here: [tx hash]()
     }
     
 ```
-ELSE path is tested here: [tx hash]()
+Requires that virtualBalance is greater than difference between available balance and amount to transfer.  Should revert if it's not. 
+<br>Nothing to test.
 
 <br>
 
