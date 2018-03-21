@@ -116,8 +116,7 @@ Requires that beneficiary account is exist.
         super.finalization();
     }    
 ```
-
-Else path is tested here: [tx hash]()
+There is no ELSE path to take if the condition is failed.
 
 
 <br>
