@@ -1,4 +1,4 @@
-# Etheal Smart Contracts Preliminary Audit Report
+# Etheal Smart Contracts Audit Report
 
 ## Preamble
 This audit report was undertaken by **BlockchainLabs.nz** for the purpose of providing feedback to **Etheal**.
@@ -44,10 +44,11 @@ The audit report is focused on the following key areas - though this is not an e
 
 ## Analysis Reports
 
-- [Test Coverage](test-coverage.md)
+- [Sale process overview](sales-process.md)
 - [Dynamic Analysis](dynamic-analysis.md)
-- [Functional Analysis](functional-tests.md)
 - [Gas Consumption](gas-consumption-report.md)
+- [Functional Analysis](functional-tests.md)
+- [Test Coverage](test-coverage.md)
 
 ## Issues
 
@@ -101,9 +102,11 @@ The audit report is focused on the following key areas - though this is not an e
 
 ## Conclusion
 
-This preliminary report does not represent our final opinion of these contracts, as this audit is still in progress. All findings are subject to change until the end of the auditing period.
+Developers of the contracts display a strong understanding of Solidity and smart contract development best practices.
 
-We have not found any security issues with any of the contracts audited so far, and the developers of the contracts display a strong understanding of Solidity and smart contract development best practices.
+We took part in carefully reviewing all source code provided, including both static and dynamic testing methodology.
+
+Overall we consider the resulting contracts following the audit feedback period adequate and have not identified any potential vulnerabilities. This contract has a low level risk of ETH, HEAL or HEALP being hacked or stolen from the inspected contracts.
 
 ___
 
