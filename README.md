@@ -27,7 +27,7 @@ Please see detailed description at the bottom.
 * Controlled: basic Controlled contract needed for MiniMe
 * MiniMeToken: basic 0.2 version of MiniMe token
 * TokenController: token controller interface needed to controll the Etheal MiniMe token
-* EthealToken: is a very basic MiniMe token instanciation
+* EthealToken: is a very basic MiniMe token instantiation
 
 ### Crowdsale basic contracts
 * HasNoTokens: basic token to implement extraction of mistakenly sent tokens
@@ -40,7 +40,7 @@ Please see detailed description at the bottom.
 * FinalizableCrowdsale: basic OpenZeppelin FinalizableCrowdsale contract
 * RefundableCrowdsale: basic OpenZeppelin RefundableCrowdsale contract
   * with a modification to forward funds to multisig wallet after reaching the cap, thus securing the funds as soon as it makes sense
-* RefundVault: basic OpenZeppelin RefunVault contract
+* RefundVault: basic OpenZeppelin RefundVault contract
   * with extension of HasNoTokens, to recover mistakenly sent tokens
 * TokenVesting: basic OpenZeppelin TokenVesting contract
 
@@ -53,9 +53,9 @@ It implements HasNoTokens to recover mistakenly sent tokens to this contract.
 
 All the tokens it holds can be used to create and revoke grants, transfer tokens to existing but not started grants.
 
-Tokens for future crowdsales are held at the address of 0x1, which can be only moved to a crowdsale contract. Crowdsale contracts send excess HEAL tokens back to address 0x1. If there is no active crowdsale (which has started but not ended), then it can set a new crowdsale contract and transfer tokens to it.
+Tokens for future crowdsales are held at the address of 0x1, which can only be moved to a crowdsale contract. Crowdsale contracts send excess HEAL tokens back to address 0x1. If there is no active crowdsale (which has started but not ended), then it can set a new crowdsale contract and transfer tokens to it.
 
-We have decided to handle crowdsales in separate contract to the EthealController, because there will be several rounds of sales, and the exact timing of round 2 and 3 is unknown yet.
+We have decided to handle crowdsales in a separate contract to the EthealController, because there will be several rounds of sales, and the exact timing of round 2 and 3 is unknown yet.
 
 ![Token Distribution](https://etheal.com/img/chart-heal-token.svg "Token Distribution")
 
@@ -66,7 +66,7 @@ Token distribution:
   * excess tokens will be sent to the HODLER reward contract
 * Multisig Wallet: 20M HEAL tokens for Community Fund
 * EthealController: 20.5M HEAL tokens for team, founders, advisors
-  * it can be only withdrawn through grants
+  * it can only be withdrawn through grants
     * team: 4 years vesting with one year cliff
     * advisors: 6 months vesting with three months cliff
 * 2 investor addresses: 3M HEAL tokens
@@ -84,7 +84,7 @@ It implements proxy functions to EthealToken (MiniMe), which stops transfering H
 Only crowdsale contracts can interract with it, and it accepts modifications until its start time.
 
 Implements hodler reward logic:
-Keep tokens intact (can’t move any portion of it) on your wallet for 3/6/9 months after two weeks of ending the normal sale, and 20M HEAL token HODLER reward will be distributed among presale and sale HODLERs in the ratio of their intact stakes to the total amount.
+Keep tokens intact (can’t move any portion of it) in your wallet for 3/6/9 months after two weeks of ending the normal sale, and 20M HEAL token HODLER reward will be distributed among presale and sale HODLERs in the ratio of their intact stakes to the total amount.
 
 * HODLER lot 3 months: 1,000,000 HEAL
 * HODLER lot 6 months: 2,000,000 HEAL
@@ -106,9 +106,9 @@ It implements a softcap logic, which means after reaching the soft cap the crowd
 
 Sending funds below the minimum contribution amount (0.1ETH) is rejected.
 
-Sending funds above the maximum gas price (100gwei), calculates stakes on 80%. If you send 5eth with 101gwei gas price results in calculating your funds as 4eth. In case of not reaching minimum goal, 5eth is refunded. In case of reaching the goal you get 4eth * 1250 = 5000 HEAL tokens.
+Sending funds above the maximum gas price (100gwei), calculates stakes on 80%. If you send 5eth with 101gwei gas price , this results in calculating your funds as 4eth. In case of not reaching minimum goal, 5eth is refunded. In case of reaching the goal you get 4eth * 1250 = 5000 HEAL tokens.
 
-It implements partial refunding for the last contributor, so the user don't have to be smart, the contract is smart instead. If there is only 1 eth remained, and the last contributor send 5 eth, then 4 eth is refunded.
+It implements partial refunding for the last contributor, so the users don't have to be smart, the contract is smart instead. If there is only 1 eth remaining, and the last contributor sends 5 eth, then 4 eth is refunded.
 
 Before token sale start parameters can be changed: max gas price and penalty, minimum contribution, minimum goal and soft and hard caps, starting and end times, and rate.
 
@@ -120,8 +120,8 @@ It implements **whitelist** logic as follows:
   * if 10eth is the max stake for day 2 of whitelist, and you already have 6eth stakes
   * then either you can send 4eth with gas price less than or equal to 100gwei
   * or 5eth with more than 100gwei gas price, since then 5*80%=4eth stake will be credited to you
-* The smartcontract is ***smart***, so the user doesn't have to. Sending excess funds results in partial refund.
-  * Eg. in the previous case if you send 10 eth with lower than 100gwei gas price results in crediting 4eth stake to you and refunding 6eth.
+* The smartcontract is ***smart***, so the user doesn't have to be. Sending excess funds results in partial refund.
+  * Eg. in the previous case if you send 10 eth with lower than 100gwei gas price, this results in crediting 4eth stake to you and refunding 6eth.
 
 
 ### EthealNormalSale
