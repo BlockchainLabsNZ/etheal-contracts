@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/EthealController.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> EthealController.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>15/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.39% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.1% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.37% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/59</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">49×</span>
+<span class="cline-any cline-yes">49×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">321×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">321×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.17;
+&nbsp;
+import "./SafeMath.sol";
+import "./ERC20MiniMe.sol";
+import "./Crowdsale.sol";
+import "./TokenController.sol";
+import "./Pausable.sol";
+import "./Hodler.sol";
+import "./TokenVesting.sol";
+import "./HasNoTokens.sol";
+&nbsp;
+&nbsp;
+/**
+ * @title EthealController
+ * @author thesved
+ * @notice Controller of the Etheal Token
+ * @dev Crowdsale can be only replaced when no active crowdsale is running.
+ *  The contract is paused by default. It has to be unpaused to enable token transfer.
+ */
+contract EthealController is Pausable, HasNoTokens, TokenController {
+    using SafeMath for uint;
+&nbsp;
+    // when migrating this contains the address of the new controller
+    TokenController public newController;
+&nbsp;
+    // token contract
+    ERC20MiniMe public ethealToken;
+&nbsp;
+    // distribution of tokens
+    uint256 public constant ETHEAL_UNIT = 10**18;
+    uint256 public constant THOUSAND = 10**3;
+    uint256 public constant MILLION = 10**6;
+    uint256 public constant TOKEN_SALE1_PRE = 9 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_SALE1_NORMAL = 20 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_SALE2 = 9 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_SALE3 = 5 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_HODL_3M = 1 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_HODL_6M = 2 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_HODL_9M = 7 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_REFERRAL = 2 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_BOUNTY = 1500 * THOUSAND * ETHEAL_UNIT;
+    uint256 public constant TOKEN_COMMUNITY = 20 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_TEAM = 14 * MILLION * ETHEAL_UNIT;
+    uint256 public constant TOKEN_FOUNDERS = 6500 * THOUSAND * ETHEAL_UNIT;
+    uint256 public constant TOKEN_INVESTORS = 3 * MILLION * ETHEAL_UNIT;
+&nbsp;
+    // addresses only SALE will remain, the others will be real eth addresses
+    address public SALE = 0X1;
+    address public FOUNDER1 = 0X2;
+    address public FOUNDER2 = 0X3;
+    address public INVESTOR1 = 0X4;
+    address public INVESTOR2 = 0X5;
+&nbsp;
+    // addresses for multisig and crowdsale
+    address public ethealMultisigWallet;
+    Crowdsale public crowdsale;
+&nbsp;
+    // hodler reward contract
+    Hodler public hodlerReward;
+&nbsp;
+    // token grants
+    TokenVesting[] public tokenGrants;
+    uint256 public constant VESTING_TEAM_CLIFF = 365 days;
+    uint256 public constant VESTING_TEAM_DURATION = 4 * 365 days;
+    uint256 public constant VESTING_ADVISOR_CLIFF = 3 * 30 days;
+    uint256 public constant VESTING_ADVISOR_DURATION = 6 * 30 days;
+&nbsp;
+&nbsp;
+    /// @dev only the crowdsale can call it
+    modifier onlyCrowdsale() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(msg.sender == address(crowdsale));
+        _;
+    }
+&nbsp;
+    /// @dev only the crowdsale can call it
+<span class="fstat-no" title="function not covered" >    modifier onlyEthealMultisig(</span>) {
+<span class="cstat-no" title="statement not covered" >        require(msg.sender == address(ethealMultisigWallet))</span>;
+        _;
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // Constructor, overrides
+    ////////////////
+&nbsp;
+    /// @notice Constructor for Etheal Controller
+    function EthealController(address _wallet) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_wallet != address(0));
+&nbsp;
+        paused = true;
+        ethealMultisigWallet = _wallet;
+    }
+&nbsp;
+    /// @dev overrides HasNoTokens#extractTokens to make it possible to extract any tokens after migration or before that any tokens except etheal
+<span class="fstat-no" title="function not covered" >    function extractTokens(address _token, address _claimer) onlyOwner publi</span>c {
+<span class="cstat-no" title="statement not covered" >        require(newController != address(0) || _token != address(ethealToken))</span>;
+&nbsp;
+        super.extractTokens(_token, _claimer);
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // Manage crowdsale
+    ////////////////
+&nbsp;
+    /// @notice Set crowdsale address and transfer HEAL tokens from ethealController's SALE address
+    /// @dev Crowdsale can be only set when the current crowdsale is not active and ethealToken is set
+    function setCrowdsaleTransfer(address _sale, uint256 _amount) public onlyOwner {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require (_sale != address(0) &amp;&amp; !isCrowdsaleOpen() &amp;&amp; address(ethealToken) != address(0));
+&nbsp;
+        crowdsale = Crowdsale(_sale);
+&nbsp;
+        // transfer HEAL tokens to crowdsale account from the account of controller
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(ethealToken.transferFrom(SALE, _sale, _amount));
+    }
+&nbsp;
+    /// @notice Is there a not ended crowdsale?
+    /// @return true if there is no crowdsale or the current crowdsale is not yet ended but started
+    function isCrowdsaleOpen() public view returns (bool) {
+        return address(crowdsale) != address(0) &amp;&amp; !crowdsale.hasEnded() &amp;&amp; crowdsale.hasStarted();
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // Manage grants
+    ////////////////
+&nbsp;
+    /// @notice Grant vesting token to an address
+<span class="fstat-no" title="function not covered" >    function createGrant(address _beneficiary, uint256 _amount, bool _revocable, bool _advisor) public onlyOwne</span>r {
+<span class="cstat-no" title="statement not covered" >        require(_beneficiary != address(0) &amp;&amp; _amount &gt; 0)</span>;
+&nbsp;
+        // create token grant
+<span class="cstat-no" title="statement not covered" >        if (_advisor) {</span>
+            tokenGrants.push(new TokenVesting(_beneficiary, now, VESTING_ADVISOR_CLIFF, VESTING_ADVISOR_DURATION, _revocable));
+        } else {
+            tokenGrants.push(new TokenVesting(_beneficiary, now, VESTING_TEAM_CLIFF, VESTING_TEAM_DURATION, _revocable));
+        }
+&nbsp;
+        // transfer funds to the grant
+<span class="cstat-no" title="statement not covered" >        require(ethealToken.transfer(address(tokenGrants[tokenGrants.length.sub(1)]), _amount))</span>;
+    }
+&nbsp;
+    /// @notice Transfer tokens to a grant until it is starting
+<span class="fstat-no" title="function not covered" >    function transferToGrant(uint256 _id, uint256 _amount) public onlyOwne</span>r {
+<span class="cstat-no" title="statement not covered" >        require(_id &lt; tokenGrants.length &amp;&amp; _amount &gt; 0 &amp;&amp; now &lt; tokenGrants[_id].start())</span>;
+&nbsp;
+        // transfer funds to the grant
+<span class="cstat-no" title="statement not covered" >        require(ethealToken.transfer(address(tokenGrants[_id]), _amount))</span>;
+    }
+&nbsp;
+    /// @dev Revoking grant
+<span class="fstat-no" title="function not covered" >    function revokeGrant(uint256 _id) public onlyOwne</span>r {
+<span class="cstat-no" title="statement not covered" >        require(_id &lt; tokenGrants.length)</span>;
+&nbsp;
+        tokenGrants[_id].revoke(ethealToken);
+    }
+&nbsp;
+    /// @notice Returns the token grant count
+<span class="fstat-no" title="function not covered" >    function getGrantCount() view public returns (uint</span>) {
+<span class="cstat-no" title="statement not covered" >        return tokenGrants.length;</span>
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // BURN, handle ownership - only multsig can call these functions!
+    ////////////////
+&nbsp;
+    /// @notice contract can burn its own or its sale tokens
+<span class="fstat-no" title="function not covered" >    function burn(address _where, uint256 _amount) public onlyEthealMultisi</span>g {
+<span class="cstat-no" title="statement not covered" >        require(_where == address(this) || _where == SALE)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        require(ethealToken.destroyTokens(_where, _amount))</span>;
+    }
+&nbsp;
+    /// @notice replaces controller when it was not yet replaced, only multisig can do it
+<span class="fstat-no" title="function not covered" >    function setNewController(address _controller) public onlyEthealMultisi</span>g {
+<span class="cstat-no" title="statement not covered" >        require(_controller != address(0) &amp;&amp; newController == address(0))</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        newController = TokenController(_controller)</span>;
+        ethealToken.changeController(_controller);
+        hodlerReward.transferOwnership(_controller);
+&nbsp;
+        // send eth
+<span class="cstat-no" title="statement not covered" >        uint256 _stake = this.balance</span>;
+<span class="cstat-no" title="statement not covered" >        if (_stake &gt; 0)</span>
+            _controller.transfer(_stake);
+&nbsp;
+        // send tokens
+<span class="cstat-no" title="statement not covered" >        _stake = ethealToken.balanceOf(this)</span>;
+<span class="cstat-no" title="statement not covered" >        if (_stake &gt; 0)</span>
+            ethealToken.transfer(_controller, _stake);
+    }
+&nbsp;
+    /// @notice Set new multisig wallet, to make it upgradable.
+<span class="fstat-no" title="function not covered" >    function setNewMultisig(address _wallet) public onlyEthealMultisi</span>g {
+<span class="cstat-no" title="statement not covered" >        require(_wallet != address(0))</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        ethealMultisigWallet = _wallet</span>;
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // When PAUSED
+    ////////////////
+&nbsp;
+    /// @notice set the token, if no hodler provided then creates a hodler reward contract
+    function setEthealToken(address _token, address _hodler) public onlyOwner whenPaused {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_token != address(0));
+&nbsp;
+        ethealToken = ERC20MiniMe(_token);
+&nbsp;
+        
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (_hodler != address(0)) {
+            // set hodler reward contract if provided
+<span class="cstat-no" title="statement not covered" >            hodlerReward = Hodler(_hodler)</span>;
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (hodlerReward == address(0)) {
+            // create hodler reward contract if not yet created
+            hodlerReward = new Hodler(TOKEN_HODL_3M, TOKEN_HODL_6M, TOKEN_HODL_9M);
+        }
+&nbsp;
+        // MINT tokens if not minted yet
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (ethealToken.totalSupply() == 0) {
+            // sale
+            ethealToken.generateTokens(SALE, TOKEN_SALE1_PRE.add(TOKEN_SALE1_NORMAL).add(TOKEN_SALE2).add(TOKEN_SALE3));
+            // hodler reward
+            ethealToken.generateTokens(address(hodlerReward), TOKEN_HODL_3M.add(TOKEN_HODL_6M).add(TOKEN_HODL_9M));
+            // bounty + referral
+            ethealToken.generateTokens(owner, TOKEN_BOUNTY.add(TOKEN_REFERRAL));
+            // community fund
+            ethealToken.generateTokens(address(ethealMultisigWallet), TOKEN_COMMUNITY);
+            // team -&gt; grantable
+            ethealToken.generateTokens(address(this), TOKEN_FOUNDERS.add(TOKEN_TEAM));
+            // investors
+            ethealToken.generateTokens(INVESTOR1, TOKEN_INVESTORS.div(3).mul(2));
+            ethealToken.generateTokens(INVESTOR2, TOKEN_INVESTORS.div(3));
+        }
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // Proxy for Hodler contract
+    ////////////////
+    
+    /// @notice Proxy call for setting hodler start time
+    function setHodlerTime(uint256 _time) public onlyCrowdsale {
+        hodlerReward.setHodlerTime(_time);
+    }
+&nbsp;
+    /// @notice Proxy call for adding hodler stake
+    function addHodlerStake(address _beneficiary, uint256 _stake) public onlyCrowdsale {
+        hodlerReward.addHodlerStake(_beneficiary, _stake);
+    }
+&nbsp;
+    /// @notice Proxy call for setting hodler stake
+<span class="fstat-no" title="function not covered" >    function setHodlerStake(address _beneficiary, uint256 _stake) public onlyCrowdsal</span>e {
+        hodlerReward.setHodlerStake(_beneficiary, _stake);
+    }
+&nbsp;
+&nbsp;
+    ////////////////
+    // MiniMe Controller functions
+    ////////////////
+&nbsp;
+    /// @notice No eth payment to the token contract
+<span class="fstat-no" title="function not covered" >    function proxyPayment(address _owner) payable public returns (bool</span>) {
+<span class="cstat-no" title="statement not covered" >        revert()</span>;
+    }
+&nbsp;
+    /// @notice Before transfers are enabled for everyone, only this and the crowdsale contract is allowed to distribute HEAL
+    function onTransfer(address _from, address _to, uint256 _amount) public returns (bool) {
+        // moving any funds makes hodl participation invalid
+        hodlerReward.invalidate(_from);
+&nbsp;
+        return !paused || _from == address(this) || _to == address(this) || _from == address(crowdsale) || _to == address(crowdsale);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function onApprove(address _owner, address _spender, uint256 _amount) public returns (bool</span>) {
+<span class="cstat-no" title="statement not covered" >        return !paused;</span>
+    }
+&nbsp;
+    /// @notice Retrieve mistakenly sent tokens (other than the etheal token) from the token contract 
+<span class="fstat-no" title="function not covered" >    function claimTokenTokens(address _token) public onlyOwne</span>r {
+<span class="cstat-no" title="statement not covered" >        require(_token != address(ethealToken))</span>;
+&nbsp;
+        ethealToken.claimTokens(_token);
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Mar 20 2018 09:21:09 GMT+1300 (NZDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
