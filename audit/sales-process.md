@@ -31,8 +31,8 @@ To buy tokens, they have a few options:
 - send Ethers to deposit contract itself (through payable fallback function)
 - call `buyTokens()` function of the normal sales contract.
 
-The last one can be done only by whitelisted customers OR within whitelist threshold limit otherwise, it will be reverted. 
-<br>Therefore it is worth to consider buying HEAL tokens through deposit contract interface. 
+The last one can be done only by whitelisted customers OR within whitelist threshold limit, otherwise it will be reverted. 
+<br>Therefore it is worth considering buying HEAL tokens through deposit contract interface. 
 
 #### Proccess flow
 
@@ -90,12 +90,12 @@ One can get bonuses by:
 Contract: [EthealNormalSales.sol](https://github.com/BlockchainLabsNZ/etheal-contracts/blob/master/contracts/EthealNormalSale.sol)
 
 The contract regulates the Sale period and allows users to buy tokens.
-There is a limitation: customers can buy tokens only if the amount of ETH to contribute doesn't exceed the allowed threshold (depending on whether you are whitelisted or not), otherwise, the transaction will be reverted. 
+There is a limitation: customers can buy tokens only if the amount of ETH to contribute doesn't exceed the allowed threshold (depending on whether you are whitelisted or not), otherwise the transaction will be reverted. 
 
 ### Important Functions
 
   - **depositETH**
-<br>This function is called automatically from deposit contract when whitelisted investor makes a new contribution. It calls the `handleContribution()` function.
+<br>This function is called automatically from deposit contract when a whitelisted investor makes a new contribution. It calls the `handleContribution()` function.
 
   - **buyTokens**
 <br>Can be called by anyone, but only whitelisted investors can contribute more than threshold amount (1 Ether). It forwards the call to the `handlePayment()` function.
@@ -122,7 +122,7 @@ There is a limitation: customers can buy tokens only if the amount of ETH to con
 	
 		The name of the function may confuse one. 
 		The function itself doesn't transfer any tokens.
-		It is worth to consider to adjust the name, e.g. addTokenToBalance().
+		It is worth considering adjusting the name, e.g. addTokenToBalance().
 		
 
   - **getBonus**
