@@ -183,7 +183,8 @@ ERC20 standard function.
         return true;
     }
 ```
-IF path is tested here: [tx hash]()
+If balance of sender is less than amount to send, it will fail (function returns false).
+<br>Nothing to test. 
 
 <br>
 
@@ -204,9 +205,11 @@ IF path is tested here: [tx hash]()
         return true;
     }
 ```
-IF path (spenderAllowance < _value) is tested here: [tx hash]()
+If amount to transfer is greater than authorised amount, it should fail (function returns false).
+<br>Nothing to test. 
 <br>
-IF path (fromBalance < _value) is tested here: [tx hash]()
+If balance of sender is less than amount to send, it will fail (function returns false).
+<br>Nothing to test. 
 
 
 <br>
@@ -231,7 +234,8 @@ function transferFrom (address _from, address _to, uint256 _value) returns (bool
         }
     }
 ```    
-IF path is tested here: [tx hash]()
+If amount to transfer is greater than authorised amount, it should fail (function returns false).
+<br>Nothing to test.
 
 <br>
 
