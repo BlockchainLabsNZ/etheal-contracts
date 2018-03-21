@@ -19,6 +19,6 @@ matrix:
 script:
   - npm run gana
   - sleep 5
-  - truffle test
+  # - truffle test
 after_script:
   - ./node_modules/.bin/solidity-coverage && cat coverage/lcov.info | ./node_modules/.bin/coveralls
