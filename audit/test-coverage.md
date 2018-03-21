@@ -151,8 +151,8 @@ There is no ELSE path to take if the condition is failed.
   
 ```
 
-Else path is tested here: [tx hash]()
-
+Else path is tested here: [tx hash](https://kovan.etherscan.io/tx/0x8810953cfbb5e46122d5fc2bd7a5e400375553a64f3488984726f9b2db8062a5)
+Operation failed as expected.
 
 
 
