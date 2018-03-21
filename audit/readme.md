@@ -5,7 +5,7 @@ This audit report was undertaken by **BlockchainLabs.nz** for the purpose of pro
 
 It has subsequently been shared publicly without any express or implied warranty.
 
-Solidity contracts were sourced from the public Github repo [thesved/etheal-sale](https://github.com/thesved/etheal-sale) at this commit [1eb8d114a0e1794f27d3577ef9a109c500d31643](https://github.com/thesved/etheal-sale/commit/1eb8d114a0e1794f27d3577ef9a109c500d31643) - we would encourage all community members and token holders to make their own assessment of the contracts.
+Solidity contracts were sourced from the public Github repo [thesved/etheal-sale](https://github.com/thesved/etheal-sale) at this commit [1eb8d114a0e1794f27d3577ef9a109c500d31643](https://github.com/thesved/etheal-sale/commit/1eb8d114a0e1794f27d3577ef9a109c500d31643) - We would encourage all community members and token holders to make their own assessment of the contracts.
 
 ## Scope
 The following contracts were subject for static, dynamic and functional analyses:
@@ -16,7 +16,7 @@ The following contracts were subject for static, dynamic and functional analyses
 - [EthealPromoToken.sol](https://github.com/thesved/etheal-sale/blob/1eb8d114a0e1794f27d3577ef9a109c500d31643/contracts/EthealPromoToken.sol)
 
 ## Focus areas
-The audit report is focused on the following key areas - though this is not an exhaustive list.
+The audit report focuses on the following key areas, although this list is not exhaustive.
 
 ### Correctness
 - No correctness defects uncovered during static analysis?
