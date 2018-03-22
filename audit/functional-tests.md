@@ -65,4 +65,8 @@ Tests are conducted on the Kovan test network.
 
 > ERROR | The Contract solidity compilation has exceeded the maximum timeout/memory limit that we can safely process. Automated source code verification is unavailable for this source code.
 
+The error message was produced as a result of cloning the master branch from the following repository [BlockchainLabsNZ/etheal-contracts](https://github.com/BlockchainLabsNZ/etheal-contracts). Truffle v4.1.3 (core: 4.1.3) Solidity v0.4.19 (solc-js) were used.
 
+Upon successful deployment from the [2_deploy_contract.js](https://github.com/BlockchainLabsNZ/etheal-contracts/blob/migration_testing/migrations/2_deploy_contracts.js) file using `truffle migrate` contracts were then flattened using [alcuadrado/truffle-flattener](https://github.com/alcuadrado/truffle-flattener). 
+
+The resulting source was then provided to both [(v1)](https://kovan.etherscan.io/verifyContract) and [(v2)](https://kovan.etherscan.io/verifyContract2?a=) of the Etherscan contract verification tool.
