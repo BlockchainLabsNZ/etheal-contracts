@@ -60,3 +60,9 @@ Tests are conducted on the Kovan test network.
 [`0xe97358`](https://kovan.etherscan.io/tx/0xe97358f5bf1cd56cb7618c19d226fe872505636095abf6ad9d9ff15cd41292ac)
 - [x] Successfully refund investors uncleared contribution after sale has ended.
 [`0x61b36c`](https://kovan.etherscan.io/tx/0x61b36c942797774cddfe6d48e1bf4052a29702624c957d14ce009398e5c58895)
+
+`AUDIT-NOTE!` There is no contract source verification for `EthealNormalSale` and `EthealDeposit`. When attempting to verify these contracts using truffle migration deployment the following error message was output.
+
+> ERROR | The Contract solidity compilation has exceeded the maximum timeout/memory limit that we can safely process. Automated source code verification is unavailable for this source code.
+
+
