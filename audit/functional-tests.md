@@ -29,7 +29,7 @@ Tests are conducted on the Kovan test network.
   - [x] Owner can successfully whitelist addresses with changes to threshold. [`0x6414e9`](https://kovan.etherscan.io/tx/0x6414e9f262babfb930f961d84e373bcda336d965ee6abfc4a15a57d33649703f)
   - [x] Owner can successfully set deposit address. [`0x8583ed`](https://kovan.etherscan.io/tx/0x8583ed6ff5f41d538fddd4c223ec4ddfe42d25efc03f9c4aec0172d4422201ae)
   - [x] Cannot set promo token controller if called by non-owner. [`0x5d2792`](https://kovan.etherscan.io/tx/0x5d27920feee6d70b85ccee4d88bba34fff1e3be4a4d5803ce0f5b1134a6b6af1)    
-  - [x] Cannot set set times if called by non-owner. [`0x506c33`](https://kovan.etherscan.io/tx/0x506c33a7aa4bae248896d8bdce685fbe454f26d3de06f83c2c749abdc4ed059e)
+  - [x] Cannot set times if called by non-owner. [`0x506c33`](https://kovan.etherscan.io/tx/0x506c33a7aa4bae248896d8bdce685fbe454f26d3de06f83c2c749abdc4ed059e)
   - [x] Cannot set caps if called by non-owner. [`0xbc5882`](https://kovan.etherscan.io/tx/0xbc588221a121a4cf0f29ddf001b1d62ed46cffc573b12b69fd9e81fd5e799c33)
   - [x] Cannot set rate if called by non-owner. [`0xaa1de4`](https://kovan.etherscan.io/tx/0xaa1de4abe80d8c1f870fa42c830c10ff565a31ebdeded1d7b99ac8d2cf1541d1)
   - [x] Cannot set minimum contribution if called by non-owner. [`0xc49b4f`](https://kovan.etherscan.io/tx/0xc49b4f30a3077bb511c4712f1c1ea2264db2d1e3f99f2331ab1092977490d97a)
