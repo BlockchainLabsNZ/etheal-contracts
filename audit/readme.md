@@ -77,6 +77,8 @@ The audit report focuses on the following key areas, although this list is not e
 - **Differentiate functions and events by names** - `Best practice`
 <br>Favor capitalization and a prefix in front of events (we suggest Log), to prevent the risk of confusion between functions and events ... [View on GitHub](https://github.com/BlockchainLabsNZ/etheal-contracts/issues/20)
 
+  - [x] Fixed. [72caa0](https://github.com/thesved/etheal-sale/commit/72caa07d02192ae3328348f9f4364cf701ac85d0)
+
 - **Variable type declarations should be consistent** - `Best practice`
 <br>It is recommended to explicitly define your variable types, this confirms your intent and safeguards against a future when the default type changes. It is better to keep them consistent in the same contract ... [View on GitHub](https://github.com/BlockchainLabsNZ/etheal-contracts/issues/16)
 
@@ -87,6 +89,9 @@ The audit report focuses on the following key areas, although this list is not e
 
 - **Log transaction ID on adding deposit** - `Best practice`
 <br>Now only investor address and current transaction amount is logged. Suggest logging the transaction ID also. This ID can be used later to forward transaction ... [View on GitHub](https://github.com/BlockchainLabsNZ/etheal-contracts/issues/18)
+
+  - [x] Fixed. [06f835](https://github.com/thesved/etheal-sale/commit/06f835ffffbc7e849da2585bd14660c1b4fed189)
+
 
 ### Major
 
