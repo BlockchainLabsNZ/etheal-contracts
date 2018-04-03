@@ -82,8 +82,12 @@ The audit report focuses on the following key areas, although this list is not e
 - **Variable type declarations should be consistent** - `Best practice`
 <br>It is recommended to explicitly define your variable types, this confirms your intent and safeguards against a future when the default type changes. It is better to keep them consistent in the same contract ... [View on GitHub](https://github.com/BlockchainLabsNZ/etheal-contracts/issues/16)
 
+- [x] Fixed. [32370c](https://github.com/thesved/etheal-sale/commit/32370ca3b789cf57af5be14f57174265d9ffb216)
+
 - **Small gas optimisation (massNotify)** - `Best practice`
 <br>Assigning `_owner.length` to a local variable costs more than directly using the array length.<br>Test result: It costs around 10 gas more on calling this function each time ... [View on GitHub](https://github.com/BlockchainLabsNZ/etheal-contracts/issues/15)
+
+- [x] Fixed. [c41e06](https://github.com/thesved/etheal-sale/commit/c41e06ed5daa912acc3f04c29638eedb3cb46e6c)
 
 ### Moderate
 
